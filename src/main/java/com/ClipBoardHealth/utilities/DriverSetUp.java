@@ -23,32 +23,29 @@ public class DriverSetUp {
 
     public void setUp(String br, String rt) throws MalformedURLException {
 
-        if (rt.equals("docker")) {
+        if (rt.equalsIgnoreCase("docker")) {
             URL url = new URL("http://localhost:4444/wd/hub");
             ChromeOptions options = new ChromeOptions();
+            options.setCapability("name", "chrome");
             options.addArguments("start-maximized");
-            options.addArguments("enable-automation");
-            options.addArguments("--headless");
             options.addArguments("--no-sandbox");
-            options.addArguments("--disable-infobars");
             options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--disable-browser-side-navigation");
-            options.addArguments("--disable-gpu");
+            options.addArguments("--headless");
             driver = new RemoteWebDriver(url, options);
             driver.get(baseUrl);
         }
-         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
-                 + "/Drivers/chromedriver");
-        if (br.equals("chrome") && rt.equals("local")) {
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
+                + "/Drivers/chromedriver");
+        if (br.equalsIgnoreCase("chrome") && rt.equals("local")) {
             System.setProperty("webdriver.chrome.driver", readConfig.getChromePath());
             driver = new ChromeDriver();
-        } else if (br.equals("firefox") && rt.equals("local")) {
+        } else if (br.equalsIgnoreCase("firefox") && rt.equals("local")) {
             System.setProperty("webdriver.gecko.driver", readConfig.getFirefoxPath());
             driver = new FirefoxDriver();
         }
 
         driver.manage().window().maximize();
-        logger = LogManager.getLogger("Insurance  Project");
+        logger = LogManager.getLogger("ClipBoardHealth  Project");
         logger.info("***********Opened up the  browser***********");
         driver.get(baseUrl);
 
