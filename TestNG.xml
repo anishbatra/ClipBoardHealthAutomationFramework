@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ClipBoardHealthProject" >
+    <listeners>
+        <listener class-name="com.ClipBoardHealth.utilities.Reporting"/>
+    </listeners>
+    <test name="ClipBoardHealthTests">
+        <!-- <parameter name="browser" value="chrome"></parameter>
+         <parameter name="runType" value="local"></parameter>
+      <parameter name="runType" value="docker"></parameter> -->
+        <classes>
+            <class name="com.ClipBoardHealth.testCases.TC_DemoTest_001"/>
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->
