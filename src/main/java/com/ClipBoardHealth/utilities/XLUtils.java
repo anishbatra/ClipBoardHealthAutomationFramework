@@ -20,7 +20,7 @@ public class XLUtils {
 
 
     public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir")
-            + "/src/main/java/org/health/testdata/ViewItemTestData.xlsx";
+            + "/src/main/java/com/ClipBoardHealth/testdata/DataProvider.xlsx";
 
     public static Object[][] getTestData(String sheetName) throws IOException {
 

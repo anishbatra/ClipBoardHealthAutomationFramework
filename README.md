@@ -18,6 +18,7 @@ TestNG for Test Driven and Data Driven Testing
 Maven as a build tool
 Git for Code Maintenance
 GitHub Actions for CI/CD
+Docker Desktop for executing test cases locally on Docker 
 Extent Reports
 Log4J for logs
 
@@ -32,13 +33,13 @@ Build the Project
 
 # Running Tests
 
-To run tests,
+ Run tests through various ways 
 
 ## Local Browsers
 
-Go to /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/Configuration/config.properties
-Change runType to "local"
-Run testng.xml
+1. Go to /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/Configuration/config.properties
+2. Change runType to "local"
+3. Run testng.xml
 
 ## Docker Locally
 pre-requisite :- 
@@ -51,11 +52,11 @@ pre-requisite :-
 
 # GitHub Actions
 
-ci.yml at /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/.github/workflows/ci.yml contains the steps to run test cases on GitHub Actions
-Test run on Selenoid server on GitHub Servers 
-ci.yml defines the actions / steps to run the test cases on Git Hub servers 
-Here our tests will run on machine having Ubuntu - Linux O.S
-Tests will run in headless mode , logs  will be visible in GitHub Actions account
+1. ci.yml at /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/.github/workflows/ci.yml contains the steps to run test cases on GitHub Actions
+2. Test run on Selenoid server on GitHub Servers 
+3. ci.yml defines the actions / steps to run the test cases on Git Hub servers 
+4. Here our tests will run on machine having Ubuntu - Linux O.S
+5. Tests will run in headless mode , logs  will be visible in GitHub Actions account
 
 # Through CLI
 
@@ -63,7 +64,15 @@ Tests will run in headless mode , logs  will be visible in GitHub Actions accoun
 2. Install maven cli in your system 
 3. Run the command  **"mvn clean install"** 
 
+
 # Reporting
 
 Local/docker  Test Execution report can be seen under test-output  folder
 Remote  Test Execution report will be published on Git Hub Pages. below is the Url 
+
+# Logs
+
+1. Implemented using log4J maven dependancy 
+2. configuration is loaded in log4j.properties file.
+3. Once test case execution is finsihed , a file named application.log will be generated in root of the project 
+4. logs also gets displayed on console.

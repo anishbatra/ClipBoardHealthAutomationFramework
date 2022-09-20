@@ -26,7 +26,7 @@ public class ReadConfig {
 
     public String getApplicationURL() {
         String url = pro.getProperty("baseURL");
-        logger.info(">>>>>>>>>>>>>URL opened>>>>>>>>>>>>>>>");
+        logger.info("*******Url Launched******");
         return url;
     }
 

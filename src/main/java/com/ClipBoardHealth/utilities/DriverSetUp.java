@@ -1,13 +1,12 @@
 package com.ClipBoardHealth.utilities;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterClass;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -20,6 +19,10 @@ public class DriverSetUp {
 
     public static WebDriver driver;
     public static Logger logger;
+
+    public DriverSetUp() {
+        logger = LogManager.getLogger(this.getClass());
+    }
 
     public void setUp(String br, String rt) throws MalformedURLException {
 
@@ -46,6 +49,7 @@ public class DriverSetUp {
 
         driver.manage().window().maximize();
         logger = LogManager.getLogger("ClipBoardHealth  Project");
+
         logger.info("***********Opened up the  browser***********");
         driver.get(baseUrl);
 
