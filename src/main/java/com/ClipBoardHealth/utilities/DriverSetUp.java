@@ -12,13 +12,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class DriverSetUp {
-    ReadConfig readConfig = new ReadConfig();
-
-    public String baseUrl = readConfig.getApplicationURL();
-
-
     public static WebDriver driver;
     public static Logger logger;
+    ReadConfig readConfig = new ReadConfig();
+    public String baseUrl = readConfig.getApplicationURL();
 
     public DriverSetUp() {
         logger = LogManager.getLogger(this.getClass());

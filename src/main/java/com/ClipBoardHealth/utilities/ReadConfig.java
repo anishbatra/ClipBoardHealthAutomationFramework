@@ -9,8 +9,8 @@ import java.util.Properties;
 public class ReadConfig {
 
 
-    public Properties pro;
     public static Logger logger;
+    public Properties pro;
 
     public ReadConfig() {
         logger = Logger.getLogger(this.getClass());

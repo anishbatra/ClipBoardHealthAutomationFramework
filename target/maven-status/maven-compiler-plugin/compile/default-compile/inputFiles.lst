@@ -1,7 +1,12 @@
 /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/utilities/Helpers.java
+/Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/pages/AllPageObjects.java
+/Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/webPages/ProductPage.java
 /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/utilities/Reporting.java
 /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/utilities/XLUtils.java
 /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/Base/BaseClass.java
+/Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/utilities/WebEventListener.java
 /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/utilities/DriverSetUp.java
 /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/utilities/ReadConfig.java
+/Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/webPages/HomePage.java
+/Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/webPages/ProductDetailsPage.java
 /Users/anish.batra/Documents/ClipBoardHealthAutomationFramework/src/main/java/com/ClipBoardHealth/Data/InputData.java

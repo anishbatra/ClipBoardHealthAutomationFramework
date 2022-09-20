@@ -1,25 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-19T22:39:14 EDT" name="ClipBoardHealthProject" finished-at="2022-09-19T22:39:18 EDT" duration-ms="4687">
+  <suite started-at="2022-09-20T15:08:42 EDT" name="ClipBoardHealthProject" finished-at="2022-09-20T15:09:02 EDT" duration-ms="19401">
     <groups>
     </groups>
-    <test started-at="2022-09-19T22:39:14 EDT" name="ClipBoardHealthTests" finished-at="2022-09-19T22:39:18 EDT" duration-ms="4687">
-      <class name="com.ClipBoardHealth.testCases.TC_DemoTest_001">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.ClipBoardHealth.testCases.TC_DemoTest_001@550ee7e5]" started-at="2022-09-19T22:39:14 EDT" name="setUp" finished-at="2022-09-19T22:39:18 EDT" duration-ms="4206" status="PASS">
+    <test started-at="2022-09-20T15:08:42 EDT" name="ClipBoardHealthTests" finished-at="2022-09-20T15:09:02 EDT" duration-ms="19401">
+      <class name="com.ClipBoardHealth.testCases.AmazonProductDetailsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.ClipBoardHealth.testCases.AmazonProductDetailsTest@76a4ebf2]" started-at="2022-09-20T15:08:43 EDT" name="setUp" finished-at="2022-09-20T15:08:47 EDT" duration-ms="4358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="sampleTest()[pri:0, instance:com.ClipBoardHealth.testCases.TC_DemoTest_001@550ee7e5]" started-at="2022-09-19T22:39:18 EDT" name="sampleTest" finished-at="2022-09-19T22:39:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="verifyAmazonHomePageTitleTest()[pri:1, instance:com.ClipBoardHealth.testCases.AmazonProductDetailsTest@76a4ebf2]" started-at="2022-09-20T15:08:47 EDT" name="verifyAmazonHomePageTitleTest" finished-at="2022-09-20T15:08:47 EDT" duration-ms="142" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ClipBoardHealth.testCases.TC_DemoTest_001@550ee7e5]" started-at="2022-09-19T22:39:18 EDT" name="tearDown" finished-at="2022-09-19T22:39:18 EDT" duration-ms="157" status="PASS">
+        </test-method> <!-- verifyAmazonHomePageTitleTest -->
+        <test-method signature="clickOnHamBurgerLinkTest()[pri:2, instance:com.ClipBoardHealth.testCases.AmazonProductDetailsTest@76a4ebf2]" started-at="2022-09-20T15:08:47 EDT" name="clickOnHamBurgerLinkTest" finished-at="2022-09-20T15:08:48 EDT" duration-ms="976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnHamBurgerLinkTest -->
+        <test-method signature="getProductDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.ClipBoardHealth.testCases.AmazonProductDetailsTest@76a4ebf2]" started-at="2022-09-20T15:08:49 EDT" name="getProductDetailsTest" data-provider="readExcelData" finished-at="2022-09-20T15:09:01 EDT" duration-ms="12727" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TV, Appliances, Electronics]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Televisions]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Samsung]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Price: High to Low]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProductDetailsTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ClipBoardHealth.testCases.AmazonProductDetailsTest@76a4ebf2]" started-at="2022-09-20T15:09:01 EDT" name="tearDown" finished-at="2022-09-20T15:09:02 EDT" duration-ms="436" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ClipBoardHealth.testCases.TC_DemoTest_001 -->
+      </class> <!-- com.ClipBoardHealth.testCases.AmazonProductDetailsTest -->
     </test> <!-- ClipBoardHealthTests -->
   </suite> <!-- ClipBoardHealthProject -->
 </testng-results>

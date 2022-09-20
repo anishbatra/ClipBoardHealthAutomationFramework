@@ -15,22 +15,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Start Selenoid server
-      uses: n-ton4/selenoid-github-action@master
-      id :  start-selenoid
-      continue-on-error: false
-      with:
+      - name: Start Selenoid server
+        uses: n-ton4/selenoid-github-action@master
+        id: start-selenoid
+        continue-on-error: false
+        with:
           version: 1.10.1
           args: -limit 20
           browsers: chrome
           last-versions: 1
-    - name: checkout
-      uses: actions/checkout@v2
-    - name: Run the tests
-      run:  mvn clean install
-    - name: Deploy Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.5
-      if: always()
-      with:
-        branch: gh-pages
-        folder: ./test-output/
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Run the tests
+        run: mvn clean install
+      - name: Deploy Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        if: always()
+        with:
+          branch: gh-pages
+          folder: ./test-output/

@@ -18,7 +18,6 @@ public class Helpers extends BaseClass {
     public static JavascriptExecutor executor;
 
 
-
     public static void highlightWebElement(WebDriver driver, WebElement element) {
         executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].setAttribute('style', 'background: pink; border: 2px solid blue;');", element);

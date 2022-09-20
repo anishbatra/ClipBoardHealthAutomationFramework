@@ -55,12 +55,12 @@ public class ProductPage extends BaseClass {
         }
     }
 
-    public void filterProducts(String filterOption)  {
+    public void filterProducts(String filterOption) {
         Helpers.selectTextFromDropDown(filterDropdown, filterOption, Helpers.EXPLICIT_WAIT);
         Assert.assertTrue(Helpers.isElementDisplayed(driver, filteredValue, Helpers.EXPLICIT_WAIT));
         Assert.assertTrue(filteredValue.getText().contains(filterOption));
 
-}
+    }
 
     public void getAndClickOnProductAfterFiltering(int productPlaceValue) {
         List<WebElement> webElements = new ArrayList<WebElement>();
@@ -71,7 +71,7 @@ public class ProductPage extends BaseClass {
         }
         for (int i = 0; i < webElements.size(); i++) {
             if (i == productPlaceValue - 1) {
-               // String selectedItemPrice = list.get(i).getText();
+                // String selectedItemPrice = list.get(i).getText();
                 webElements.get(i).click();
                 break;
             }
