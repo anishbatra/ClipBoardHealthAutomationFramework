@@ -33,6 +33,7 @@
                 <version>2.19.1</version>
                 <configuration>
                     <suiteXmlFiles>
+                        <testFailureIgnore>true</testFailureIgnore>
                         <!-- TestNG suite XML files -->
                         <suiteXmlFile>TestNG.xml</suiteXmlFile>
                     </suiteXmlFiles>
