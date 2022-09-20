@@ -5,11 +5,8 @@
         <listener class-name="com.ClipBoardHealth.utilities.Reporting"/>
     </listeners>
     <test name="ClipBoardHealthTests">
-        <!-- <parameter name="browser" value="chrome"></parameter>
-         <parameter name="runType" value="local"></parameter>
-      <parameter name="runType" value="docker"></parameter> -->
         <classes>
-            <class name="com.ClipBoardHealth.testCases.TC_DemoTest_001"/>
+            <class name="com.ClipBoardHealth.testCases.AmazonProductDetailsTest"/>
         </classes>
     </test>
 
