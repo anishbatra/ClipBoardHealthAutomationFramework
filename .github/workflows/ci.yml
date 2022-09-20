@@ -17,7 +17,7 @@ jobs:
     steps:
     - name: Start Selenoid server
       uses: Xotabu4/selenoid-github-action@v2
-    - uses: actions/checkout@v1
+    #- uses: actions/checkout@v1
       #id :  start-selenoid
       continue-on-error: false
 #      with:
@@ -27,8 +27,8 @@ jobs:
 #          last-versions: 1
 
     
-#    - name: checkout
-#      uses: actions/checkout@v2
+    - name: checkout
+      uses: actions/checkout@v2
     - name: Run the tests
       run:  mvn clean install
     - name: Deploy Pages
