@@ -11,12 +11,12 @@ import org.testng.Assert;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductDetailsWebPage extends BaseClass {
+public class ProductDetailsPage extends BaseClass {
 
     @FindBy(how = How.XPATH, using = "//ul[@class='a-unordered-list a-vertical a-spacing-mini']//span")
     List<WebElement> aboutItemDetails;
 
-    public ProductDetailsWebPage() {
+    public ProductDetailsPage() {
         PageFactory.initElements(driver, this);
     }
 

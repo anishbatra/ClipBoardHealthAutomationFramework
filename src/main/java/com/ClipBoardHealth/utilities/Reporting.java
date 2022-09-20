@@ -2,7 +2,6 @@ package com.ClipBoardHealth.utilities;
 
 //Listener class used to generate Extent reports
 
-import com.ClipBoardHealth.Base.BaseClass;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -10,6 +9,10 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
@@ -25,6 +28,14 @@ public class Reporting extends TestListenerAdapter {
     public ExtentSparkReporter htmlReporter;
     public ExtentReports extent;
     public ExtentTest logger;
+
+    public static void captureScreen(WebDriver driver, String tname) throws IOException {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        File target = new File(System.getProperty("user.dir") + "/Screenshots/" + tname + ".png");
+        FileUtils.copyFile(source, target);
+        System.out.println("Screenshot taken");
+    }
 
     public void onStart(ITestContext testContext) {
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp
@@ -70,7 +81,7 @@ public class Reporting extends TestListenerAdapter {
         // to the report with GREEN
         // color highlighted
         try {
-            BaseClass.captureScreen(driver,"screenshot");
+            captureScreen(driver, "screenshot");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -92,5 +103,6 @@ public class Reporting extends TestListenerAdapter {
     public void onFinish(ITestContext testContext) {
         extent.flush();
     }
+
 }
 
