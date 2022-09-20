@@ -57,6 +57,12 @@ ci.yml defines the actions / steps to run the test cases on Git Hub servers
 Here our tests will run on machine having Ubuntu - Linux O.S
 Tests will run in headless mode , logs  will be visible in GitHub Actions account
 
+# Through CLI
+
+1. After building the project successfully
+2. Install maven cli in your system 
+3. Run the command  **"mvn clean install"** 
+
 # Reporting
 
 Local/docker  Test Execution report can be seen under test-output  folder
