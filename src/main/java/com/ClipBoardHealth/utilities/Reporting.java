@@ -2,6 +2,7 @@ package com.ClipBoardHealth.utilities;
 
 //Listener class used to generate Extent reports
 
+import com.ClipBoardHealth.Base.BaseClass;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -17,6 +18,8 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import static com.ClipBoardHealth.utilities.DriverSetUp.driver;
 
 public class Reporting extends TestListenerAdapter {
     public ExtentSparkReporter htmlReporter;
@@ -66,7 +69,11 @@ public class Reporting extends TestListenerAdapter {
         logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED)); // send the passed information
         // to the report with GREEN
         // color highlighted
-
+        try {
+            BaseClass.captureScreen(driver,"screenshot");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         String screenshotPath = System.getProperty("user.dir") + "/Screenshots/" + tr.getName() + ".png";
 
         File f = new File(screenshotPath);

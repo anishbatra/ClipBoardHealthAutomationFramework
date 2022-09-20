@@ -44,7 +44,7 @@ public class BaseClass extends DriverSetUp {
         driverSetUp.tearDown();
     }
 
-    public void captureScreen(WebDriver driver, String tname) throws IOException {
+    public static void captureScreen(WebDriver driver, String tname) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
         File target = new File(System.getProperty("user.dir") + "/Screenshots/" + tname + ".png");
